@@ -1,0 +1,111 @@
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle, rgba(0,36,63,1) 0%, rgba(0,75,115,1) 35%, rgba(0,129,177,1) 100%);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #00c6ff;
+    text-shadow: 0 0 10px #00c6ff, 0 0 20px #00c6ff;
+}
+
+label {
+    display: block;
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #c0c0c0;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+label:hover {
+    transform: scale(1.05);
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.5);
+    cursor: pointer;
+    accent-color: #00c6ff;
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    border: none;
+    background: linear-gradient(to right, #007adf, #00ecbc);
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #00ecbc, #007adf);
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+#timer {
+    margin-top: 20px;
+    font-size: 1.8em;
+    color: #ffdf00;
+    text-shadow: 0 0 5px #ffdf00, 0 0 10px #ffdf00;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ff4e50;
+    text-shadow: 0 0 5px #ff4e50, 0 0 10px #ff4e50;
+    animation: resultFadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes resultFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
